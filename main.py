@@ -63,7 +63,11 @@ class Main(QWidget):
         self.ui.tb1.setText(self.ui.tb1.text() + "9")
 
     def radix(self):
-        self.ui.tb1.setText(self.ui.tb1.text() + ".")
+        a = self.ui.tb1.text()
+        b = a.split('.')
+        print(b)
+        if len(b) == 1:
+            self.ui.tb1.setText(self.ui.tb1.text() + ".")
 
     def equal(self):
         self.b = float(self.ui.tb1.text())
@@ -87,29 +91,29 @@ class Main(QWidget):
 
     def sub(self):
         self.op = '-'
-        self.a = int(self.ui.tb1.text())
+        self.a = float(self.ui.tb1.text())
         self.ui.tb1.clear()
 
     def mul(self):
         self.op = '*'
-        self.a = int(self.ui.tb1.text())
+        self.a = float(self.ui.tb1.text())
         self.ui.tb1.clear()
 
     def div(self):
         self.op = '/'
-        self.a = int(self.ui.tb1.text())
+        self.a = float(self.ui.tb1.text())
         self.ui.tb1.clear()
 
     def per(self):
         self.op = '%'
-        self.a = int(self.ui.tb1.text())
+        self.a = float(self.ui.tb1.text())
         self.ui.tb1.clear()
 
     def c(self):
         self.ui.tb1.clear()
 
     def change(self):
-        self.a = int(self.ui.tb1.text())
+        self.a = float(self.ui.tb1.text())
         self.a *= -1
         self.ui.tb1.setText(str(self.a))
 
