@@ -111,7 +111,7 @@ class Main(QWidget):
     def change(self):
         self.a = int(self.ui.tb1.text())
         self.a *= -1
-        self.ui.tb1.setText(self.a)
+        self.ui.tb1.setText(str(self.a))
 
 
 if __name__ == "__main__":
